@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <title>Introduction</title>
+	  
+	  <link rel="shortcut icon" type="image/x-icon" href="/fix-engine/favicon.ico">
+	  <link rel="stylesheet" href="/fix-engine/css/main.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i%7CMerriweather:300,300i,400,400i%7CRoboto+Slab:300,300i,400,400i">
+
+	  <link rel="canonical" href="https://docs.imandra.ai//fix-engine/">
+	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	  <script type="text/javascript" src = "/fix-engine/jekyll-resources/assets/scripts/jquery.scrollme.min.js"></script>
+	  <script type="text/javascript" src = "/fix-engine/jekyll-resources/assets/scripts/jquery.sticky.min.js"></script>
+	  <script type="text/javascript">
+	  	 
+		$(document).ready(function(){
+			$("#StickMenu").sticky({topSpacing:52});
+		});
+
+	  </script>
+
+</head> 
+
+
+    <body>
+	      <div class="TopRowContainer">
+	<div class="TopRow">
+		<div class="TopNavLogoContainer">
+			<a class="TopNavLogoLink" href="https://docs.imandra.ai/">
+				<img class="TopNavLogo" src = "/fix-engine/jekyll-resources/assets/img/imandra_doc_logo_main.svg">
+			</a>
+		</div>
+		<nav class="TopNavContainer">
+			<ul class="TopNavList">
+				
+				 
+				
+				 
+				
+				
+				
+				
+				<li class="TopNavListItem"><a class="TopNavLink" href="/fix-engine/references/">Formal Verification</a></li>
+				
+				
+				 
+				
+				
+				
+				
+				<li class="TopNavListItem"><a class="TopNavLink" href="/fix-engine/testSuite/">Test Suite</a></li>
+				
+				
+				 
+				
+				
+				
+				
+				<li class="TopNavListItem"><a class="TopNavLink" href="/fix-engine/documentation/">Documentation</a></li>
+				
+				
+				 
+				
+				
+				
+				
+				<li class="TopNavListItem"><a class="TopNavLink" href="/fix-engine/modelVerification/">Model Verification</a></li>
+				
+				
+				
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<header class="TemplateHeader">
+	<div class="TemplateHeaderImageContainer">
+	<a href ="/fix-engine">
+		<img class="SiteSpecificImage" src="/fix-engine/assets/img/site_specific_image_v_2.svg">
+	</a>
+	</div>
+</header>
+
+
+	      <main class="MainContentColumn">
+		        <article class="ArticleContainer">
+			          <div class="DummySideMenu">
+</div>
+
+<div class="MainContent">
+    <h2>Introduction</h2>
+
+    <p>Development of the FIX Engine model began at Aesthetic Integration (AI) as part of the <a href="https://m.imandra.ai">Imandra Markets</a> product. The model consists of an executable formalisation of an administrative-level FIX engine, a sample application-level model and a set of verified precise statements about the engine’s behaviour. The properties we verify are derived from the English prose specification published by the FIX Community.</p>
+
+<p>There’s an explicit interface between administrative and application models to make it easier to generate the application-level logic from a higher-level language (e.g., AI’s Imandra Protocol Language or FIX Orchestra).</p>
+
+<p>We hope this project will be the beginning of an industry-wide effort to mathematically formalise the rules and algorithms that run the financial markets. This formalisation will significantly benefit the industry, cutting down time and costs for connecting (and ensuring regulatory compliance of) the numerous systems relying on this protocol.</p>
+
+<h2 id="why">Why</h2>
+
+<p>Having a complete formal model of the FIX protocol brings many benefits. To name a few:</p>
+
+<ul>
+  <li>
+    <p>Consensus: With the formal model, the industry has a precise, unambiguous foundation for describing, evaluating and  improving the definitions and mechanics of the protocol.</p>
+  </li>
+  <li>
+    <p>Queryable: A formal verification engine like Imandra can be used to ask and answer deep questions about the behaviour of the model automatically.</p>
+  </li>
+  <li>
+    <p>Testing: Powerful model-based testing techniques can be used to automatically generate high coverage test suites (see <a href="/fix-engine/testSuite/current-test-pack/">Test Suite</a> section below).</p>
+  </li>
+  <li>
+    <p>Executable: Outside of the Imandra-specific commands used in verification, the model itself is all valid OCaml code. You may use the full OCaml stack to compile and run the engine.</p>
+  </li>
+  <li>
+    <p>Exportable: Using the OCaml stack, the model can be compiled into a number of target languages and library formats. The community can use the verified model to generate source code in other languages (e.g. C++ or Java) targeting specific proprietary (or open source) libraries.</p>
+  </li>
+  <li>
+    <p>Simulation: The model can be used as the basis of simulation environments, using the verified engine as a semantic “gold-standard” and test oracle.</p>
+  </li>
+</ul>
+
+<h2 id="how">How</h2>
+
+<p>The model is written in two languages: OCaml and IML. OCaml is a functional language that is gaining tremendous momentum within the financial services industry. For more information, please see www.ocaml.org. For example, Jane Street a well-known market participant is a strong supporter of the language, with an active <a href="https://blogs.janestreet.com/category/ocaml/">blog</a>.</p>
+
+<p>IML stands for Imandra Modelling Language - it is a pure subset of OCaml for which AI has developed a mechanised formal semantics. This means that everything written in IML can be given a precise axiomatic (i.e., mathematical) representation, and Imandra can then be used to analyze and answer deep questions about the code. Although Imandra is proprietary and requires a license to use, OCaml is open source and there are a number of open source theorem provers which may be adapted to reason about this model.</p>
+
+<h2 id="what">What</h2>
+
+<p>The model is currently targeting version 4.4 of the FIX protocol. Over time, we plan to cover other relevant versions. View the technical documentation for further information.</p>
+
+<p>Check out the <a href="/fix-engine/references/">References</a> section for more.</p>
+
+
+</div>
+		        </article>
+	      </main>
+	      <footer class="Footer">
+	  <a class="Copyrights"href="http://imandra.ai">&#9400; 2018 Aesthetic Integration Ltd. All rights reserved.</a>
+</footer>
+
+    </body>
+
+</html>
